@@ -2,7 +2,7 @@
 
 > 全栈开发专家团 — 8 Agent · 10 Skills · 一键导入
 
-A full-stack software development team with 10 specialized skills covering backend, frontend, QA, code review, research, DevOps, and UX design. An Agent Company package for Fusion, based on the companies.sh standard.
+A full-stack software development team with 10 specialized skills covering backend, frontend, QA, code review, research, DevOps, and design. An Agent Company package for Fusion, based on the companies.sh standard.
 
 ## What's Inside
 
@@ -41,11 +41,24 @@ A full-stack software development team with 10 specialized skills covering backe
 
 ## Getting Started
 
+### 1. Import Agents
+
 ```bash
-fn agent import https://github.com/你的用户名/fullstack-crew
-# or locally:
-fn agent import ./fullstack-crew
+git clone https://github.com/kenlin8827/fullstack-crew
+cd fullstack-crew
+
+fn agent import .              # Fusion
+npx paperclipai company import . # Paperclip
 ```
+
+### 2. Optimize (Fusion only, recommended)
+
+```bash
+bash fusion-tune.sh             # Linux/Mac
+.\fusion-tune.ps1               # Windows
+```
+
+> ⚠️ Without tuning, agents use default heartbeat (1h) and may auto-claim tasks. Tuning enables economy mode, differentiated agent roles, and quality gates.
 
 After import, 8 agents appear in Dashboard. Create a task and assign to Team Lead for intelligent routing, or assign directly to any expert.
 
@@ -59,7 +72,7 @@ Team Lead (triage)
 ├── Code Review Engineer    Code Review / Security
 ├── Research Engineer       Tech Selection / ADR
 ├── DevOps Engineer         CI/CD / Docker / K8s
-└── UX Designer             Interaction / Accessibility
+├── UX Designer          Interaction / Accessibility
 ```
 
 ## Quality Gates
